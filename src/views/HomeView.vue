@@ -37,13 +37,13 @@
           </text>
         </g>
       </svg>
-      
+
     </div>
 
     <p class="work-text">I believe that smart choices and ease of use has great significance on efficiency.
-        Smart decisions and user friendly products will <span>create value</span> at the end of the day.</p>
+      Smart decisions and user friendly products will <span>create value</span> at the end of the day.</p>
 
-    
+
     <table>
       <tr>
         <th>devTools</th>
@@ -86,11 +86,21 @@
     <div class="portfolio">
       <h1>PORTFOLIO</h1>
 
+      <div class="porfolio-item-container">
 
+        <div v-for="item in state" :key="item" class="portfolio-item">
+          <p class="p-category" :class="item.category">{{ item.category }}</p>
+          <img :src="item.image" alt="item image">
+          <h4>{{ item.title }}</h4>
+          <p>{{ item.description }}</p>
+          <a :href="item.link">LinkedIn</a>
+        </div>
+
+      </div>
 
     </div>
-    
-      
+
+
 
 
 
@@ -99,24 +109,9 @@
   </main>
 </template>
 
+
+
 <script defer>
-// --- SCRIPT FOR WORK ANIMATION -- USE LATER ---
-
-// const observer = new IntersectionObserver((entries) => {
-//   entries.forEach((entry) => {
-//     console.log(entry)
-//     if (entry.isIntersecting) {
-//       entry.target.classList.add('show');
-//     } 
-//     else {
-//       entry.target.classList.remove('show');
-//     }
-//   });
-// });
-
-// const hiddenElements = document.querySelectorAll('.hidden');
-// hiddenElements.forEach((el) => observer.observe(el));
-
 
 
 </script>
@@ -351,7 +346,7 @@ table td {
   font-size: 20px;
   padding: 0 30px;
   text-align: right;
-  
+
 }
 
 
@@ -389,7 +384,8 @@ table td:nth-child(2) {
   color: var(--vt-c-white);
   border-top: 6px solid var(--vt-c-black-mute);
   border-bottom: 6px solid var(--vt-c-black-mute);
-}
+};
+
 
 
 </style>
@@ -398,6 +394,30 @@ table td:nth-child(2) {
 import { ref } from 'vue'
 
 const isActive = ref(true)
+
+// --- SCRIPT FOR WORK ANIMATION -- USE LATER ---
+
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     console.log(entry)
+//     if (entry.isIntersecting) {
+//       entry.target.classList.add('show');
+//     }
+//     else {
+//       entry.target.classList.remove('show');
+//     }
+//   });
+// });
+
+// const hiddenElements = document.querySelectorAll('.hidden');
+// hiddenElements.forEach((el) => observer.observe(el));
+
+
+
+
+import portfoliodb from '../modules/portfoliodb'
+
+const { state } = portfoliodb()
 
 
 
