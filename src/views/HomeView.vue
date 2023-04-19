@@ -10,12 +10,34 @@
     </div>
 
     <div class="description">
-      <p>Hi, i'm <span>Jakob Colmorn Johannsen</span>. I'm currently studying multimediadesign on EASV in Esbjerg, Denmark. 
+      <p>Hi, i'm <span>Jakob Colmorn Johannsen</span>. I'm currently studying multimediadesign on EASV in Esbjerg,
+        Denmark.
         My education is all about graphic design, photo- and videoproduction, UX/UI, and front-end development. </p>
-        <div class="neon-button"><a href="#">Read more</a></div>
+      <div class="neon-button"><a href="#">Read more</a></div>
     </div>
 
-    <div class="spacertest"></div>
+    <div class="work">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.06 74.81">
+        <g id="triangle1">
+          <path class="cls-1"
+            d="M48.79,0l-11.71,20.28h3.64l8.07-13.97,20.81,36.04H27.98l8.6-14.89h-3.64l-10.42,18.04h52.54L48.79,0Z" />
+        </g>
+        <g id="triangle2">
+          <path class="cls-1"
+            d="M0,29.31l26.27,45.5,11.82-20.47h-3.64l-8.18,14.16L5.46,32.46H47.08l-8.46,14.65h3.64l10.28-17.8H0Z" />
+        </g>
+        <g id="work-smart">
+          <text class="cls-2" transform="translate(11.82 25.62)">
+            <tspan x="0" y="0">workSmart</tspan>
+          </text>
+        </g>
+        <g id="not-hard">
+          <text class="cls-2" transform="translate(36.86 52.44)">
+            <tspan x="0" y="0">notHard</tspan>
+          </text>
+        </g>
+      </svg>
+    </div>
 
 
     <!-- <div :class="{active: isActive}">Test</div> -->
@@ -23,6 +45,20 @@
 </template>
 
 <style scoped>
+.cls-1 {
+  fill: #27773a;
+}
+
+.cls-2 {
+  fill: #efeded;
+  font-size: 6.15px;
+}
+
+.cls-2 tspan {
+  font-family: 'Segoe UI';
+  font-weight: 800;
+}
+
 main {
   font-family: 'Segoe UI';
 }
@@ -38,7 +74,7 @@ p {
   /* min-height: 75vh; */
   margin-top: 25vh;
   padding: 0 15% 0 15%;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -77,7 +113,7 @@ p {
   list-style-type: none;
   padding: 0 20px 0 20px;
   margin-bottom: 10px;
-  
+
 }
 
 .headline ul li:not(:nth-child(1)) {
@@ -110,7 +146,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
 }
 
 .neon-button a {
@@ -122,9 +158,9 @@ p {
   padding: 0.15em 1em 0.25em 1em;
   border-radius: 0.25em;
 
-  text-shadow: 
-  0 0 0.125em hsl(0 0% 100% / 0.3),
-  0 0 1.5em var(--vt-c-green);
+  text-shadow:
+    0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 1.5em var(--vt-c-green);
 
   box-shadow: inset 0 0 0.7em 0 var(--vt-c-green), 0 0 1em 0 var(--vt-c-green);
 
@@ -144,7 +180,7 @@ p {
 
   transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
   filter: blur(1.5em);
-  opacity: 0.7; 
+  opacity: 0.7;
   transition: opacity 100ms linear;
 }
 
@@ -182,9 +218,6 @@ p {
 
 /* --- NEON BUTTON DONE --- */
 
-.spacertest{
-  height: 800px;
-}
 
 </style>
 

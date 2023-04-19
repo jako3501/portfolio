@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 615 649">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.06 74.81">
   <defs>
     <style>
       .cls-1 {
@@ -7,18 +7,23 @@
       }
 
       .cls-2 {
-        fill: none;
+        fill: #efeded;
+        font-family: SegoeUIVariable-BoldDisplay, 'Segoe UI Variable';
+        font-size: 6.15px;
+        font-variation-settings: 'wght' 700, 'opsz' 36;
       }
     </style>
   </defs>
-  <g id="Layer_1-2" data-name="Layer 1">
-    <g id="Polygon_1" data-name="Polygon 1">
-      <polygon class="cls-2" points="615 364 195 364 246.92 274 271.17 274 231.36 343 578.64 343 405 42.03 308.95 208.52 284.7 208.52 405 0 615 364"/>
-      <path class="cls-1" d="M405,0l-120.3,208.52h24.25L405,42.03l173.64,300.97H231.36l39.81-69h-24.25l-51.92,90h420L405,0Z"/>
-    </g>
-    <g id="Polygon_2" data-name="Polygon 2">
-      <polygon class="cls-2" points="420 285 368.13 374.91 343.88 374.91 383.64 306 36.36 306 210 606.98 303.97 444.1 328.21 444.1 210 649 0 285 420 285"/>
-      <path class="cls-1" d="M0,285l210,364,118.21-204.9h-24.24l-93.97,162.88L36.36,306H383.64l-39.76,68.91h24.25l51.87-89.91H0Z"/>
-    </g>
+  <g id="triangle1">
+    <path class="cls-1" d="M48.79,0l-11.71,20.28h3.64l8.07-13.97,20.81,36.04H27.98l8.6-14.89h-3.64l-10.42,18.04h52.54L48.79,0Z"/>
+  </g>
+  <g id="triangle2">
+    <path class="cls-1" d="M0,29.31l26.27,45.5,11.82-20.47h-3.64l-8.18,14.16L5.46,32.46H47.08l-8.46,14.65h3.64l10.28-17.8H0Z"/>
+  </g>
+  <g id="work-smart">
+    <text class="cls-2" transform="translate(11.82 25.62)"><tspan x="0" y="0">workSmart</tspan></text>
+  </g>
+  <g id="not-hard">
+    <text class="cls-2" transform="translate(36.86 52.44)"><tspan x="0" y="0">notHard</tspan></text>
   </g>
 </svg>
