@@ -16,7 +16,7 @@
       <div class="neon-button"><a href="#">Read more</a></div>
     </div>
 
-    <div class="work">
+    <div class="hidden">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.06 74.81">
         <g id="triangle1">
           <path class="cls-1"
@@ -37,38 +37,102 @@
           </text>
         </g>
       </svg>
+      
     </div>
+
+    <p class="work-text">I believe that smart choices and ease of use has great significance on efficiency.
+        Smart decisions and user friendly products will <span>create value</span> at the end of the day.</p>
+
+    
+    <table>
+      <tr>
+        <th>devTools</th>
+        <th>designTools</th>
+      </tr>
+      <tr>
+        <td>JSS</td>
+        <td>Photoshop</td>
+      </tr>
+      <tr>
+        <td>HTML/CSS</td>
+        <td>Illustrator</td>
+      </tr>
+      <tr>
+        <td>SCSS</td>
+        <td>InDesign</td>
+      </tr>
+      <tr>
+        <td>PHP</td>
+        <td>XD</td>
+      </tr>
+      <tr>
+        <td>Vue</td>
+        <td>Premiere Pro</td>
+      </tr>
+      <tr>
+        <td>GitHub</td>
+        <td>After Effects</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Studio One</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>ProTools</td>
+      </tr>
+    </table>
+
+    <div class="portfolio">
+      <h1>PORTFOLIO</h1>
+
+
+
+    </div>
+    
+      
+
+
 
 
     <!-- <div :class="{active: isActive}">Test</div> -->
   </main>
 </template>
 
+<script defer>
+// --- SCRIPT FOR WORK ANIMATION -- USE LATER ---
+
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     console.log(entry)
+//     if (entry.isIntersecting) {
+//       entry.target.classList.add('show');
+//     } 
+//     else {
+//       entry.target.classList.remove('show');
+//     }
+//   });
+// });
+
+// const hiddenElements = document.querySelectorAll('.hidden');
+// hiddenElements.forEach((el) => observer.observe(el));
+
+
+
+</script>
+
 <style scoped>
-.cls-1 {
-  fill: #27773a;
-}
-
-.cls-2 {
-  fill: #efeded;
-  font-size: 6.15px;
-}
-
-.cls-2 tspan {
-  font-family: 'Segoe UI';
-  font-weight: 800;
-}
-
-main {
-  font-family: 'Segoe UI';
-}
+/* --- HEADLINE --- */
 
 p {
+  padding: 0 15% 0 15%;
+}
+
+span {
+  color: var(--vt-c-green);
   font-weight: 700;
   font-size: 20px;
 }
-
-/* --- HEADLINE --- */
 
 .headline {
   /* min-height: 75vh; */
@@ -120,26 +184,28 @@ p {
   border-left: 6px solid var(--color-border);
 }
 
+
 /* --- HEADLINE DONE --- */
 
 
-/* --- DESCRIPTION --- */
-
 .description {
   margin-top: 15vh;
-  padding: 0 15% 0 15%;
 }
 
-.description span {
-  color: var(--vt-c-green);
-  font-weight: 700;
-  font-size: 20px;
-}
 
-/* --- DESCRIPTION DONE --- */
 
 
 /* --- NEON BUTTON  --- */
+
+
+main {
+  font-family: 'Segoe UI';
+}
+
+p {
+  font-weight: 700;
+  font-size: 20px;
+}
 
 .neon-button {
   padding-top: 7vh;
@@ -219,11 +285,122 @@ p {
 /* --- NEON BUTTON DONE --- */
 
 
+svg {
+  height: 500px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cls-1 {
+  fill: #27773a;
+}
+
+.cls-2 {
+  fill: #efeded;
+  font-size: 6.15px;
+}
+
+.cls-2 tspan {
+  font-family: 'Segoe UI';
+  font-weight: 800;
+}
+
+/* --- FOR ANIMATION -- USE LATER ---  */
+
+.hidden {
+  opacity: 1;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30vh;
+}
+
+/* .show {
+  opacity: 1;
+}  */
+
+.work-text {
+  margin-top: 10vh;
+  margin-bottom: 200px;
+}
+
+
+/* --- TOOLS TABLE --- */
+
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table th {
+  font-weight: 700;
+  font-size: 30px;
+  padding: 10px 30px;
+  color: var(--vt-c-green);
+  text-align: right;
+}
+
+table th:nth-child(2) {
+  text-align: left;
+}
+
+table td {
+  font-weight: 700;
+  font-size: 20px;
+  padding: 0 30px;
+  text-align: right;
+  
+}
+
+
+
+table td:nth-child(2) {
+  text-align: left;
+}
+
+
+/* --- TOOLS TABLE DONE --- */
+
+
+/* --- PORTFOLIO --- */
+
+
+.portfolio {
+  /* min-height: 75vh; */
+  margin-top: 25vh;
+  padding: 0 15% 0 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 15% 0 15%;
+}
+
+.portfolio h1 {
+  font-weight: 800;
+  font-size: 70px;
+  line-height: 1.2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--vt-c-white);
+  border-top: 6px solid var(--vt-c-black-mute);
+  border-bottom: 6px solid var(--vt-c-black-mute);
+}
+
+
 </style>
 
 <script setup>
 import { ref } from 'vue'
 
 const isActive = ref(true)
+
+
+
+
 
 </script>
