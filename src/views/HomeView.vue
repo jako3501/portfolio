@@ -85,19 +85,18 @@
 
     <div class="portfolio">
       <h1>PORTFOLIO</h1>
-
-      <div class="porfolio-item-container">
-
+      <div class="portfolio-container">
         <div v-for="item in state" :key="item" class="portfolio-item">
-          <p class="p-category" :class="item.category">{{ item.category }}</p>
           <img :src="item.image" alt="item image">
-          <h4>{{ item.title }}</h4>
-          <p>{{ item.description }}</p>
-          <a :href="item.link">LinkedIn</a>
+          <div class="text-box">
+            <h4>{{ item.title }}</h4>
+            <p>{{ item.description }}</p>
+            <!-- <a :href="item.link">LinkedIn</a> -->
+            <p class="p-category" :class="item.category">{{ item.category }}</p>
+            <p class="p-tech">{{ item.tech }}</p>
+          </div>
         </div>
-
       </div>
-
     </div>
 
 
@@ -283,6 +282,7 @@ p {
 svg {
   height: 500px;
   width: 500px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -311,9 +311,9 @@ svg {
   margin-top: 30vh;
 }
 
-/* .show {
+.show {
   opacity: 1;
-}  */
+}
 
 .work-text {
   margin-top: 10vh;
@@ -364,7 +364,7 @@ table td:nth-child(2) {
 
 .portfolio {
   /* min-height: 75vh; */
-  margin-top: 25vh;
+  margin: 25vh 0;
   padding: 0 15% 0 15%;
   display: flex;
   justify-content: center;
@@ -384,7 +384,67 @@ table td:nth-child(2) {
   color: var(--vt-c-white);
   border-top: 6px solid var(--vt-c-black-mute);
   border-bottom: 6px solid var(--vt-c-black-mute);
-};
+}
+
+.portfolio-container {
+  /* background-color: grey; */
+  width: 100%;
+  /* margin: 150px auto; */
+  
+}
+
+.portfolio-item {
+  /* height: 50vh; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 50px 0;
+  padding: 0 0 150px 0;
+}
+
+.portfolio-item img {
+
+  max-width: 100%;
+  object-fit: cover;
+  float: left;
+  flex-basis: 100%;
+}
+
+.text-box {
+  /* background-color: green; */
+  flex-basis: 100%;
+  padding: 0 0 0 10px;
+}
+
+.text-box h4 {
+  padding: 10px;
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--vt-c-green)
+}
+
+.text-box p {
+  padding: 10px;
+  color: var(--vt-c-white-soft);
+  font-size: 15px;
+}
+
+.text-box a{
+  padding: 10px;
+}
+
+.text-box .p-category {
+  float: right;
+  padding: 0 10px 0 0;
+  color: var(--vt-c-green);
+}
+
+.text-box .p-tech {
+  float: left;
+  padding: 0 0 0 10px;
+  color: var(--vt-c-green);
+}
+
 
 
 
@@ -393,32 +453,11 @@ table td:nth-child(2) {
 <script setup>
 import { ref } from 'vue'
 
-const isActive = ref(true)
-
-// --- SCRIPT FOR WORK ANIMATION -- USE LATER ---
-
-// const observer = new IntersectionObserver((entries) => {
-//   entries.forEach((entry) => {
-//     console.log(entry)
-//     if (entry.isIntersecting) {
-//       entry.target.classList.add('show');
-//     }
-//     else {
-//       entry.target.classList.remove('show');
-//     }
-//   });
-// });
-
-// const hiddenElements = document.querySelectorAll('.hidden');
-// hiddenElements.forEach((el) => observer.observe(el));
-
-
-
-
 import portfoliodb from '../modules/portfoliodb'
 
 const { state } = portfoliodb()
 
+// const isActive = ref(true)
 
 
 
