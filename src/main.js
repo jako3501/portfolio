@@ -4,6 +4,7 @@ import router from './router'
 
 import './assets/main.css'
 import './assets/seguibl.ttf'
+import '@fortawesome/fontawesome-free/js/all'
 
 const app = createApp(App)
 
