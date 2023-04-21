@@ -51,11 +51,15 @@ a,
   }
 } */
 
+
+
+
 @media (min-width: 1024px) {
   body {
     display: flex;
     justify-content: center;
 /*     place-items: center; */
+    
   }
 
   #app {

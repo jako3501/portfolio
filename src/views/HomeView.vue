@@ -13,7 +13,7 @@
       <p>Hi, i'm <span>Jakob Colmorn Johannsen</span>. I'm currently studying multimediadesign on EASV in Esbjerg,
         Denmark.
         My education is all about graphic design, photo- and videoproduction, UX/UI, and front-end development. </p>
-      <div class="neon-button"><a href="#">Read more</a></div>
+        <RouterLink to="/about"><div class="neon-button"><a href="#">Read more</a></div></RouterLink>
     </div>
 
     <div class="hidden">
@@ -136,7 +136,7 @@ span {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0 15% 0 15%;
+  
 }
 
 .headline h1 {
@@ -446,6 +446,139 @@ table td:nth-child(2) {
 }
 
 
+@media screen and (max-width: 1270px){
+  .headline{
+    scale: 75%; 
+    padding: 0 100px;
+  }
+
+  .portfolio h1{
+    scale: 75%;
+  }
+
+  .portfolio h4{
+    scale: 75%;
+    text-align: center;
+  }
+
+  .text-box .p-category{
+    float: left;
+  }
+
+  .text-box .p-tech{
+    padding: 0;
+  }
+
+  .text-box p{
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 1105px){
+  .headline{
+    scale: 65%;
+    padding: 0;
+  }
+
+  .portfolio h1{
+    scale: 65%;
+  }
+
+  .portfolio h4{
+    scale: 65%;
+  }
+
+  p{
+    font-size: 15px;
+  }
+
+  span{
+    font-size: 15px;
+  }
+
+  svg{
+    scale: 75%;
+  }
+
+  .neon-button{
+    scale: 75%;
+  }
+
+}
+
+@media screen and (max-width: 903px){
+  .headline{
+    margin-top: 10vh;
+  }
+  
+  .headline h1{
+    font-size: 50px;
+  }
+
+  .portfolio h1{
+    font-size: 50px;
+  }
+
+  .portfolio h4{
+    font-size: 50px;
+  }
+
+  .description{
+    margin-top: 10vh;
+  }
+
+  .headline ul li {
+    font-size: 20px;
+  }
+
+  
+}
+
+@media screen and (max-width: 664px){
+  .headline h1{
+    font-size: 40px;
+  }
+
+  .portfolio h1{
+    font-size: 40px;
+  }
+
+  .portfolio h4{
+    font-size: 40px;
+  }
+
+  .headline ul li {
+    font-size: 16px;
+  }
+
+  p{
+    font-size: 13px;
+  }
+
+  span{
+    font-size: 13px;
+  }
+
+  .hidden {
+    margin: 100px 0 0 0;
+  }
+
+  .work-text{
+    margin: 50px 0 100px 0;
+  }
+
+  table th {
+  font-size: 20px;
+  padding: 10px 10px;
+  color: var(--vt-c-green);
+}
+
+table td {
+  font-size: 15px;
+  padding: 0 10px;
+}
+  
+}
 
 
 </style>
@@ -454,6 +587,7 @@ table td:nth-child(2) {
 import { ref } from 'vue'
 
 import portfoliodb from '../modules/portfoliodb'
+import { RouterLink, RouterView } from 'vue-router' 
 
 const { state } = portfoliodb()
 

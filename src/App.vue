@@ -17,7 +17,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/portfolio">Portfolio</RouterLink>
+        <RouterLink to="/portfolio">Contact</RouterLink>
       </nav>
     </div>
     
@@ -86,17 +86,17 @@ nav a:first-of-type {
   border: 0;
 }
 
-
+header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 
 @media (min-width: 1024px) {
   header {
     display: flex;
     justify-content: center;
     width: 100%;
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
   }
 
   header .wrapper {
