@@ -1,10 +1,26 @@
 <template>
   <div class="about">
     <h1>ABOUT ME</h1>
-    <p>My name is <span>Jakob Colmorn Johannsen</span>. Currently i am studying multimedia design in Denmark on Business Academy SouthWest. The education is all about designing and producing digital products. At this time i have gained experience of working with Adobe Photoshop, Illustrator, InDesign, XD, Premiere Pro, After Effects to design products. Another big aspect of the education is learning about front-end development. My experiences so far is working with CSS/HTML, SCSS, JavaScript, Vue.js and Wordpress(PHP).</p>
-    <p>The aspects that interests me the most about the education, is the <span>web development</span>. Don't get me wrong, the design aspects are a great bonus and fun to work with, but web development is what i see myself continuing with after the education is finished.</p>
-    <p>Aside from my education, i am a quite <span>tech savvy</span> person. I always tend to find new "geeky" subjects to learn, and enjoy the process of improving, learning new stuff and broaden my lsit of competencies. </p>
-    <p>One example of this is the fact that i, about 5 years ago, decided to explore the subject of <span>sound engineering</span>, which lead me to my favourite hobby, or side hustle as some might say, which is traveling around the country as a sound engineer for a variety of venues and bands that hires my service.</p>
+    <p>My name is <span>Jakob Colmorn Johannsen</span>. Currently i am studying multimedia design in Denmark on Business
+      Academy SouthWest. The education is all about designing and producing digital products. At this time i have gained
+      experience of working with Adobe Photoshop, Illustrator, InDesign, XD, Premiere Pro, After Effects to design
+      products. Another big aspect of the education is learning about front-end development. My experiences so far is
+      working with CSS/HTML, SCSS, JavaScript, Vue.js and Wordpress(PHP).</p>
+    <p>The aspects that interests me the most about the education, is the <span>web development</span>. Don't get me
+      wrong, the design aspects are a great bonus and fun to work with, but web development is what i see myself
+      continuing with after the education is finished.</p>
+    <p>Aside from my education, i am a quite <span>tech savvy</span> person. I always tend to find new "geeky" subjects to
+      learn, and enjoy the process of improving, learning new stuff and broaden my lsit of competencies. </p>
+    <p>One example of this is the fact that i, about 5 years ago, decided to explore the subject of <span>sound
+        engineering</span>, which lead me to my favourite hobby, or side hustle as some might say, which is traveling
+      around the country as a sound engineer for a variety of venues and bands that hires my service.</p>
+  </div>
+
+  <div class="video-cv">
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6E63D4GFlyc?controls=0" title="Video CV"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
   </div>
 </template>
 
@@ -18,7 +34,7 @@ p {
   font-weight: 700;
   font-size: 16px;
   color: var(--vt-c-white-soft)
-  /* padding: 0 15% 0 15%; */
+    /* padding: 0 15% 0 15%; */
 }
 
 
@@ -52,11 +68,22 @@ span {
   border-bottom: 6px solid var(--vt-c-black-mute);
 }
 
-@media screen and (max-width:730px){
+.video-cv {
+    padding: 0 15% 0 15%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .video-cv iframe {
+    width: 700px;
+    height: 394px;
+  }
+
+@media screen and (max-width:730px) {
   .about {
     padding: 0 5% 0 5%;
   }
-  
+
   .about h1 {
     font-size: 45px;
   }
@@ -69,21 +96,38 @@ span {
     font-size: 13px;
   }
 
+  .video-cv {
+    padding: 0 10% 0 10%;
+  }
+
+  .video-cv iframe {
+    width: 400px;
+    height: 225px;
+  }
 
 }
 
-@media screen and (max-width:500px){
+@media screen and (max-width:500px) {
   .about {
     padding: 0 2% 0 2%;
   }
-  
-  .about h1{
+
+  .about h1 {
     font-size: 25px;
   }
 
   .about p {
     font-size: 12px;
   }
-}
 
+  .video-cv {
+    padding: 0 5% 0 5%;
+  }
+
+  .video-cv iframe {
+    width: 300px;
+    height: 196px;
+  }
+  
+}
 </style>
