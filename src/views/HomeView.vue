@@ -83,17 +83,19 @@
       </tr>
     </table>
 
+    
     <div class="portfolio">
       <h1>PORTFOLIO</h1>
+      
       <div class="portfolio-container">
         <div v-for="item in state" :key="item" class="portfolio-item">
           <img :src="item.image" alt="item image">
           <div class="text-box">
             <h4>{{ item.title }}</h4>
-            <p>{{ item.description }}</p>
-            <!-- <a :href="item.link">LinkedIn</a> -->
+            <p>{{ item.description }} <a href="">View product</a></p>
             <p class="p-category" :class="item.category">{{ item.category }}</p>
             <p class="p-tech">{{ item.tech }}</p>
+            
           </div>
         </div>
       </div>
@@ -110,7 +112,7 @@
 
 
 
-<script defer>
+<script setup>
 
 
 </script>
@@ -136,7 +138,7 @@ span {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  
+
 }
 
 .headline h1 {
@@ -390,21 +392,26 @@ table td:nth-child(2) {
   /* background-color: grey; */
   width: 100%;
   /* margin: 150px auto; */
-  
+
 }
 
 .portfolio-item {
-  /* height: 50vh; */
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
   margin: 50px 0;
-  padding: 0 0 150px 0;
+  /* background: linear-gradient(90deg, rgba(39, 119, 58, 0.164) 0%, rgba(0,0,0,1) 100%); */
+  background: linear-gradient(90deg, rgba(209, 209, 209, 0.075) 0%, rgba(0,0,0,1) 100%);
 }
+
+ .portfolio-item:nth-child(even){
+  flex-direction: row-reverse;
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(209, 209, 209, 0.075) 100%);
+} 
 
 .portfolio-item img {
 
-  max-width: 100%;
+  max-width: 50%;
   object-fit: cover;
   float: left;
   flex-basis: 100%;
@@ -424,31 +431,30 @@ table td:nth-child(2) {
 }
 
 .text-box p {
-  padding: 10px;
+  padding: 0 10px 10px 10px;
   color: var(--vt-c-white-soft);
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .text-box a{
-  padding: 10px;
+  font-weight: 600;
 }
 
 .text-box .p-category {
-  float: right;
-  padding: 0 10px 0 0;
+  padding: 0px 0px 0px 10px;
   color: var(--vt-c-green);
 }
 
 .text-box .p-tech {
-  float: left;
-  padding: 0 0 0 10px;
+  padding: 0px 0px 0px 10px;
   color: var(--vt-c-green);
 }
 
 
 @media screen and (max-width: 1270px){
   .headline{
-    scale: 75%; 
+    scale: 75%;
     padding: 0 100px;
   }
 
@@ -510,7 +516,7 @@ table td:nth-child(2) {
   .headline{
     margin-top: 10vh;
   }
-  
+
   .headline h1{
     font-size: 50px;
   }
@@ -531,7 +537,7 @@ table td:nth-child(2) {
     font-size: 20px;
   }
 
-  
+
 }
 
 @media screen and (max-width: 664px){
@@ -577,7 +583,7 @@ table td {
   font-size: 15px;
   padding: 0 10px;
 }
-  
+
 }
 
 
@@ -587,7 +593,7 @@ table td {
 import { ref } from 'vue'
 
 import portfoliodb from '../modules/portfoliodb'
-import { RouterLink, RouterView } from 'vue-router' 
+import { RouterLink, RouterView } from 'vue-router'
 
 const { state } = portfoliodb()
 

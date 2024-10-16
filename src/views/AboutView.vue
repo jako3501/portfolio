@@ -15,13 +15,6 @@
         engineering</span>, which lead me to my favourite hobby, or side hustle as some might say, which is traveling
       around the country as a sound engineer for a variety of venues and bands that hires my service.</p>
   </div>
-
-  <div class="video-cv">
-    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6E63D4GFlyc?controls=0" title="Video CV"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen></iframe>
-  </div>
 </template>
 
 <style>
